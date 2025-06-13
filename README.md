@@ -19,7 +19,7 @@
 > npm install express
 
 4. Запуск сервера:
-> node server.js
+> node src/server.js
 
 5. Перейдите по ссылке:
 > http://localhost:1337
