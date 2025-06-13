@@ -1,9 +1,15 @@
 const express = require('express');
+const path = require('path');
 const app = express();
-const port = 1337;
+const PORT = 1337;
 
-app.use(express.static('src/pages'));
+const ROOT_PATH = path.resolve(__dirname,'..', 'pages');
 
-app.listen(port, () => {
-    console.log('Сервер запущен на порту ' + port);
+
+app.use(express.static(ROOT_PATH));
+
+
+
+app.listen(PORT, () => {
+    console.log(`Сервер запущен на http://localhost:${PORT}`);
 });
