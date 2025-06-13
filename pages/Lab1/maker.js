@@ -1,6 +1,3 @@
-const { time } = require("console");
-const { eventNames } = require("process");
-
 function addToDisplay(value) {
     document.getElementById('display').value += value;
 }
@@ -10,7 +7,7 @@ function clearDisplay() {
 function calculateResult() {
     try {
         const expression = document.getElementById('display').value;
-        const result = eval(expression); // вычисляем выражение
+        const result = eval(expression);
         if (isNaN(result) || !isFinite(result)) {
             clearDisplay();
             alert("Ошибка вычисления!");
